@@ -1,0 +1,60 @@
+@import 'mixins';
+@import 'fonts';
+@import 'colors';
+
+
+$border-radius--inner: 10px;
+$border-radius--outer: 20px;
+
+:root, body {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.qr {
+  &__wrapper {
+    height: 100dvh;
+    width: 100dvw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-grey;
+  }
+  &__frame {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+
+    background-color: $white;
+    border-radius: $border-radius--outer;
+    text-align: center;
+  }
+  &__img {
+    width: 18rem;
+    height: 18rem;
+    border-radius: $border-radius--inner;
+    user-select: none;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1rem;
+    max-width: 288px;
+    &--heading {
+      @include heading;
+      text-wrap: pretty;
+    }
+    &--information {
+      @include body;
+      text-wrap: balance;
+    }
+  }
+
+}

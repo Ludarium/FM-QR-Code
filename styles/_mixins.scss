@@ -1,0 +1,16 @@
+@import 'styles/fonts';
+@import 'styles/colors';
+@mixin heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+
+  color: $dark-navy;
+}
+@mixin body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1rem, 18px);
+
+  color: $grey
+}
