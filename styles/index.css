@@ -1,18 +1,77 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import 'styles/fonts';
- *   |         ^^^^^^^^^^^^^^
- *   '
- *   _mixins.scss 1:9  @import
- *   index.scss 1:9    root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import 'styles/fonts';\d\a   \2502          ^^^^^^^^^^^^^^\a   \2575 \a   _mixins.scss 1:9  @import\a   index.scss 1:9    root stylesheet";
+@font-face {
+  font-family: "Outfit";
+  font-weight: 400;
+  src: local("Outfit"), url("../fonts/Outfit/static/Outfit-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Outfit";
+  font-weight: 600;
+  src: local("Outfit"), url("../fonts/Outfit/static/Outfit-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-weight: 400;
+  src: local("Outfit"), url("../fonts/Outfit/static/Outfit-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-weight: 600;
+  src: local("Outfit"), url("../fonts/Outfit/static/Outfit-Bold.ttf") format("truetype");
+}
+:root, body {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.qr__wrapper {
+  height: 100dvh;
+  width: 100dvw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: oklch(0.905 0.023 252.184);
+}
+.qr__frame {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: oklch(1 0 89.876);
+  border-radius: 20px;
+  text-align: center;
+}
+.qr__img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 10px;
+  user-select: none;
+}
+.qr__description {
+  display: flex;
+  flex-direction: column;
+  column-gap: 1rem;
+  max-width: 288px;
+}
+.qr__description--heading {
+  font-family: "Outfit", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: oklch(0.313 0.059 260.169);
+  text-wrap: pretty;
+}
+.qr__description--information {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1rem, 18px);
+  color: oklch(0.625 0.036 264.275);
+  text-wrap: balance;
+}
+
+/*# sourceMappingURL=index.css.map */
