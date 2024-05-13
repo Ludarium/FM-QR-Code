@@ -40,5 +40,5 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ## Author
 
-- Frontend Mentor - [@Ludarium](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Ludarium](https://www.frontendmentor.io/profile/Ludarium)
 
